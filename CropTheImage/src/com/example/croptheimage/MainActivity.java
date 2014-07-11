@@ -47,7 +47,7 @@ public class MainActivity extends Activity {
 		imageView3.setOnClickListener(new ImageViewListener());
 		imageView4 = (ImageView)this.findViewById(R.id.imageView4);
 		imageView4.setOnClickListener(new ImageViewListener());
-		int cut_random[] = {2131034172,2131034173,2131034174,2131034175};
+		int cut_random[] = {2131034172,2131034173,2131034174,2131034175};//所有imageview的ID組
 		for (int cut_no=0;cut_no<=3;cut_no++) {
 			Bitmap origialBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.fourteen);
 			int w = origialBitmap.getWidth()/2;
@@ -55,7 +55,7 @@ public class MainActivity extends Activity {
 			if(cut_no==0){
 				Bitmap cutBitmap = Bitmap.createBitmap(origialBitmap, 20, 20 ,w,h);//前兩是原圖起始座標,後兩個是需求截圖的大小	
 				int random = (int)(Math.random() * cut_random.length);
-				ImageView random_cutimage = (ImageView)findViewById(cut_random[random]);
+				ImageView random_cutimage = (ImageView)findViewById(cut_random[random]);//隨機取任何一個imageview來呈現第一次切割的圖
 				random_cutimage.setImageBitmap(cutBitmap);
 				cut_random[random]=1;
 			}
