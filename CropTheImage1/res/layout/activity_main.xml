@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFF00"
+    tools:context="${packageName}.${activityClass}" >
+	
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="140dp"
+        android:layout_height="123dp"
+        android:layout_above="@+id/imageView3"
+        android:layout_toRightOf="@+id/imageView1" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="140dp"
+        android:layout_height="123dp"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_below="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="140dp"
+        android:layout_height="123dp"
+        android:layout_below="@+id/imageView1"
+        android:layout_toLeftOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/imageView2"
+        android:layout_marginRight="27dp"
+        android:layout_marginTop="23dp"
+        android:text="計時:　00:00" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="140dp"
+        android:layout_height="123dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="114dp" />
+
+</RelativeLayout>
